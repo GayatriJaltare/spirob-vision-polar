@@ -1,0 +1,68 @@
+# ---- model checkpoints and exported policies (kept on Google Drive / a GitHub Release)
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+
+# ---- datasets and large arrays (DAgger data, demonstrations)
+*.npz
+*.npy
+*.pkl
+*.h5
+*.hdf5
+
+# ---- training logs
+logs/
+runs/
+outputs/
+wandb/
+events.out.tfevents.*
+*.log
+
+# ---- videos: ignored by default, except short clips kept in results/
+*.mp4
+*.avi
+*.mov
+*.gif
+!results/**/*.mp4
+!results/**/*.gif
+
+# ---- the upstream repo is cloned by the notebooks; it is never committed here
+spirob-mjlab/
+
+# ---- Colab / Google Drive
+drive/
+sample_data/
+.config/
+
+# ---- Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.uv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ---- Jupyter
+.ipynb_checkpoints/
+
+# ---- archives and scratch files
+*.zip
+*.tar
+*.tar.gz
+*.tmp
+*.bak
+
+# ---- secrets
+.env
+*.key
+
+# ---- editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
