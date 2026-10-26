@@ -66,3 +66,7 @@ venv/
 .idea/
 .DS_Store
 Thumbs.db
+
+# ---- allow the curated checkpoints
+!checkpoints/*.pt
+
