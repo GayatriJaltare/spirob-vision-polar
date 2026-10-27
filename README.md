@@ -1,4 +1,17 @@
 # SpiRob vision: from a blind policy to a camera student
+## Quick start (Linux + NVIDIA GPU)
+
+```bash
+git clone https://github.com/GayatriJaltare/spirob-vision-polar.git ~/spirob-vision && cd ~/spirob-vision
+chmod +x setup.sh run.sh
+nano config.env        # check the paths; set MODEL_TAG (a name for the robot model being tested)
+./setup.sh             # GPU check, gets sir's repo + environment, checks tools and checkpoints
+./run.sh check         # robot model compatible with the checkpoints? (~5 min)
+./run.sh eval-teacher  # current model: expect ~93 % nominal, 88 % retention, 50 % sector
+./run.sh help          # all steps: finetune, coverage, eval-student, dagger, ablations, summary
+```
+
+**Latest results** (region 125–185 mm, 51–80°): teacher C1_a3 at 93 / 88 / 50 %; camera student v2 at 92 / 90 / 50 % (nominal / near-nominal / sector), with the egg found from the image to 4.2 mm. Full history: [docs/HISTORY.md](docs/HISTORY.md).
 
 A camera-based pick-and-place policy for **SpiRob**, a soft arm pulled by two cables. The arm picks an egg off a small
 pedestal and drops it into a bucket, with the egg starting at many positions in a polar sector around the robot base.
