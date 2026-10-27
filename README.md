@@ -6,7 +6,7 @@ git clone https://github.com/GayatriJaltare/spirob-vision-polar.git ~/spirob-vis
 chmod +x setup.sh run.sh
 nano config.env        # check the paths; set MODEL_TAG (a name for the robot model being tested)
 ./setup.sh             # GPU check, gets sir's repo + environment, checks tools and checkpoints
-./run.sh check         # robot model compatible with the checkpoints? (~5 min)
+./run.sh check         # robot model compatible with the checkpoints?
 ./run.sh eval-teacher  # current model: expect ~93 % nominal, 88 % retention, 50 % sector
 ./run.sh help          # all steps: finetune, coverage, eval-student, dagger, ablations, summary
 ```
